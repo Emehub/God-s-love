@@ -40,7 +40,7 @@ export const ContactPage = () => {
         <Container>
           <h1 className="text-4xl font-bold">Contact Us</h1>
           <p className="mx-auto mt-4 max-w-2xl text-blue-200">
-            We'd love to hear from you. Reach out to partner with us, volunteer, or learn more
+            We will love to hear from you. Reach out to partner with us, volunteer, or learn more
             about how you can make a difference.
           </p>
         </Container>
