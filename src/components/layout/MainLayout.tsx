@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router'
+import { WhatsAppButton } from '@/components/common'
 import { Footer } from './Footer'
 import { Navbar } from './Navbar'
 
@@ -9,5 +10,6 @@ export const MainLayout = () => (
       <Outlet />
     </main>
     <Footer />
+    <WhatsAppButton />
   </div>
 )

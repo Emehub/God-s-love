@@ -1,7 +1,13 @@
 export const APP = {
-  NAME: 'Cliftech React',
-  DESCRIPTION: 'Production-ready React starter template',
-  AUTHOR: 'Isaiah Clifford Opoku',
+  NAME: "God's Love",
+  FULL_NAME: "God's Love Ministry",
+  TAGLINE: "Carrying God's Love to Ghana and Beyond",
+  DESCRIPTION:
+    "A Movement of Christlike People, carrying God's Love through discipleship, mentorship, education, and health promotion.",
+  EMAIL: 'avincentkofi@gmail.com',
+  PHONE: '0547959189',
+  LOCATION: 'Zaare, Near Azimbe Clinic, Bolgatanga, Upper East, Ghana',
+  AUTHOR: "God's Love Ministry",
 } as const
 
 export const BREAKPOINTS = {

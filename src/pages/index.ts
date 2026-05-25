@@ -1,2 +1,6 @@
 export { HomePage } from './HomePage'
+export { AboutPage } from './AboutPage'
+export { ProgramsPage } from './ProgramsPage'
+export { GalleryPage } from './GalleryPage'
+export { ContactPage } from './ContactPage'
 export { NotFoundPage } from './NotFoundPage'
