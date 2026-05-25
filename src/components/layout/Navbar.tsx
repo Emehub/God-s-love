@@ -10,7 +10,6 @@ const links = [
   { to: ROUTES.ABOUT, label: 'About' },
   { to: ROUTES.PROGRAMS, label: 'Programs' },
   { to: ROUTES.GALLERY, label: 'Gallery' },
-  { to: ROUTES.CONTACT, label: 'Contact' },
 ]
 
 export const Navbar = () => {
