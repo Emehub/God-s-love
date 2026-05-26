@@ -19,11 +19,14 @@ export const Footer = () => (
         {/* Brand */}
         <div className="lg:col-span-2">
           <div className="mb-4 flex items-center gap-2.5">
-            <img src="/logo.jpeg" alt="God's Love" className="h-10 w-10 rounded-full object-cover ring-2 ring-amber-400/40" />
-            <span className="text-xl font-bold">{APP.NAME}</span>
+            <img src="/logo.jpeg" alt="God's Love Vision" className="h-10 w-10 rounded-full object-cover ring-2 ring-amber-400/40" />
+            <div className="flex flex-col leading-tight">
+              <span className="text-xl font-bold">{APP.NAME}</span>
+              <span className="text-[10px] font-semibold tracking-widest text-amber-400 uppercase">{APP.SHORT_NAME} · {APP.TAGLINE}</span>
+            </div>
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-blue-200">
-            A Movement of Christlike People carrying God's Love through discipleship, education, skill training, and community transformation in Ghana and beyond.
+            Demonstrating God's love by empowering people through transformation, education, health, skills, agriculture and community development in Ghana and beyond.
           </p>
         </div>
 

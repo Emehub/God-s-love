@@ -2,103 +2,79 @@ import { Link } from 'react-router'
 import {
   FaChurch,
   FaGraduationCap,
-  FaHandHoldingHeart,
   FaHeartbeat,
-  FaTools,
+  FaLeaf,
   FaUsers,
 } from 'react-icons/fa'
 import { HiArrowRight } from 'react-icons/hi'
-import { MdLeaderboard } from 'react-icons/md'
+import { MdVolunteerActivism } from 'react-icons/md'
 import { Container } from '@/components/common'
 import { ROUTES } from '@/constants/routes'
 
-const programs = [
+const departments = [
   {
     icon: FaChurch,
-    title: 'Christlike Discipleship',
-    desc: 'Nurturing spiritual growth and a deeper relationship with God through structured discipleship programs.',
-  },
-  {
-    icon: FaUsers,
-    title: 'Mentorship',
-    desc: 'Connecting individuals with experienced mentors to guide personal and professional development.',
-  },
-  {
-    icon: MdLeaderboard,
-    title: 'Leadership Training',
-    desc: 'Equipping the next generation of servant leaders with tools to make lasting impact in their communities.',
+    title: 'Mission & Transformation',
+    desc: 'Raising transformational leaders and promoting discipleship, mentorship, and spiritual growth through outreach and evangelism.',
   },
   {
     icon: FaGraduationCap,
-    title: 'Formal Education',
-    desc: 'Providing access to quality education for the less privileged, opening doors to brighter futures.',
-  },
-  {
-    icon: FaTools,
-    title: 'Skill Training',
-    desc: 'Empowering individuals with practical vocational skills to become economically self-sufficient.',
+    title: 'Education & Skills',
+    desc: 'Providing quality education and skills training — from scholarships and vocational training to digital literacy and entrepreneurship.',
   },
   {
     icon: FaHeartbeat,
-    title: 'Health Promotion',
-    desc: 'Promoting holistic well-being through health awareness, screenings, and community health initiatives.',
+    title: 'Health Department',
+    desc: 'Promoting healthy living through medical outreaches, health education, maternal & child health, and access to basic healthcare.',
+  },
+  {
+    icon: FaLeaf,
+    title: 'Agriculture',
+    desc: 'Supporting smallholder farmers with training, improved inputs, climate-smart farming, and agribusiness development.',
+  },
+  {
+    icon: MdVolunteerActivism,
+    title: 'Community Development',
+    desc: 'Driving holistic community transformation through WASH, social welfare, women & youth empowerment, and disaster relief.',
   },
 ]
 
-const values = [
-  {
-    num: '01',
-    title: "God's Love for all Persons",
-    desc: 'We acknowledge that the Love of God is Supreme and Unconditional. Inspired by His love, we create a world where everyone can experience the transformative power of divine Love.',
-  },
-  {
-    num: '02',
-    title: 'Missions and Evangelism',
-    desc: "We make God's missions known through compassionate, respectful, and impactful evangelism faithful to the Gospel.",
-  },
-  {
-    num: '03',
-    title: 'Discipline',
-    desc: 'We cultivate discipline in our lives, enabling us to achieve our full potential and lead purposeful, productive lives.',
-  },
-  {
-    num: '04',
-    title: 'Stewardship',
-    desc: 'We believe God owns everything. We are managers of His creations and resources, held to His standard of faithful care.',
-  },
-  {
-    num: '05',
-    title: 'Transformational Community Development',
-    desc: 'Community-based and sustainable, we focus on the less privileged of all ages, partnering with churches and organizations.',
-  },
+const coreValues = [
+  { label: 'Love' },
+  { label: 'Integrity' },
+  { label: 'Compassion' },
+  { label: 'Excellence' },
+  { label: 'Service' },
+  { label: 'Faith' },
+  { label: 'Accountability' },
+  { label: 'Unity' },
 ]
 
 export const HomePage = () => (
   <div>
     {/* ── Hero ─────────────────────────────────────────────────────── */}
     <section className="relative flex min-h-[92vh] items-center overflow-hidden bg-blue-900">
-      {/* decorative gradient blobs */}
-      <div className="absolute -top-32 right-0 h-[600px] w-[600px] rounded-full bg-amber-500/10 blur-3xl" />
-      <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-blue-700/30 blur-3xl" />
+      <div className="absolute -top-32 right-0 h-150 w-150 rounded-full bg-amber-500/10 blur-3xl" />
+      <div className="absolute bottom-0 left-0 h-100 w-100 rounded-full bg-blue-700/30 blur-3xl" />
 
       <Container className="relative z-10 py-24 text-center text-white">
         <span className="mb-5 inline-block rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-300">
-          A Movement of Christlike People
+          God's Love Vision · GLV
         </span>
         <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-          Carrying God's Love{' '}
-          <span className="text-amber-400">to Ghana and Beyond</span>
+          Transforming Lives,{' '}
+          <span className="text-amber-400">Building Communities</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-blue-100">
-          Through discipleship, mentorship, leadership training, formal education, skill training,
-          and health promotion, we transform lives and communities one person at a time.
+          Demonstrating God's love by empowering people through transformation, education, health,
+          skills, agriculture and community development in Ghana and beyond.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Link
             to={ROUTES.PROGRAMS}
             className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-8 py-3 font-semibold text-white transition-colors hover:bg-amber-600"
           >
-            Our Programs <HiArrowRight />
+            Our Departments <HiArrowRight />
           </Link>
           <Link
             to={ROUTES.CONTACT}
@@ -111,9 +87,9 @@ export const HomePage = () => (
         {/* quick stats */}
         <div className="mx-auto mt-20 grid max-w-2xl grid-cols-3 gap-6 border-t border-white/10 pt-10">
           {[
-            { label: 'Core Programs', value: '6' },
-            { label: 'Community Focus', value: 'Ghana +' },
-            { label: 'Core Values', value: '5' },
+            { label: 'Departments', value: '5' },
+            { label: 'Core Values', value: '8' },
+            { label: 'Strategic Objectives', value: '5' },
           ].map((s) => (
             <div key={s.label}>
               <p className="text-3xl font-bold text-amber-400">{s.value}</p>
@@ -134,24 +110,22 @@ export const HomePage = () => (
         <div className="grid gap-8 md:grid-cols-2">
           <div className="rounded-2xl border border-amber-100 bg-white p-8 shadow-sm">
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-amber-100">
-              <FaHandHoldingHeart className="text-2xl text-amber-600" />
+              <FaUsers className="text-2xl text-amber-600" />
             </div>
             <h3 className="mb-3 text-xl font-bold text-blue-900">Our Vision</h3>
             <p className="leading-relaxed text-slate-600">
-              A Movement of Christlike People, carrying God's Love through Christlike Discipleship,
-              Mentorship and Leadership training, Formal Education, Skill training, and Health
-              Promotion, transforming all-inclusive People and Communities in Ghana and beyond.
+              A transformed generation and empowered communities reflecting God's love, character
+              and purpose.
             </p>
           </div>
           <div className="rounded-2xl border border-blue-100 bg-white p-8 shadow-sm">
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
-              <FaUsers className="text-2xl text-blue-700" />
+              <FaChurch className="text-2xl text-blue-700" />
             </div>
             <h3 className="mb-3 text-xl font-bold text-blue-900">Our Mission</h3>
             <p className="leading-relaxed text-slate-600">
-              Reach out to People with God's Love, Equip, and Connect the less privileged to
-              potential providence partners, to be transformed and serve as agents of change in
-              their communities in Ghana and beyond.
+              To demonstrate God's love by empowering people through transformation, education,
+              health, skills, agriculture and community development.
             </p>
           </div>
         </div>
@@ -166,28 +140,27 @@ export const HomePage = () => (
       </Container>
     </section>
 
-    {/* ── Programs ─────────────────────────────────────────────────── */}
+    {/* ── Departments ──────────────────────────────────────────────── */}
     <section className="bg-white py-20">
       <Container>
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold text-blue-900">What We Do</h2>
+          <h2 className="text-3xl font-bold text-blue-900">Our 5 Pillars</h2>
           <div className="mx-auto mt-3 h-1 w-16 rounded bg-amber-500" />
           <p className="mx-auto mt-4 max-w-xl text-slate-600">
-            Six pillars of transformative ministry serving individuals and communities across Ghana
-            and beyond.
+            Five departments working together for holistic community transformation.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {programs.map((p) => (
+          {departments.map((d) => (
             <div
-              key={p.title}
+              key={d.title}
               className="group rounded-2xl border border-slate-100 p-6 transition-all hover:border-amber-200 hover:shadow-md"
             >
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 transition-colors group-hover:bg-amber-100">
-                <p.icon className="text-2xl text-amber-600" />
+                <d.icon className="text-2xl text-amber-600" />
               </div>
-              <h3 className="mb-2 font-bold text-blue-900">{p.title}</h3>
-              <p className="text-sm leading-relaxed text-slate-600">{p.desc}</p>
+              <h3 className="mb-2 font-bold text-blue-900">{d.title}</h3>
+              <p className="text-sm leading-relaxed text-slate-600">{d.desc}</p>
             </div>
           ))}
         </div>
@@ -196,7 +169,7 @@ export const HomePage = () => (
             to={ROUTES.PROGRAMS}
             className="inline-flex items-center gap-2 rounded-full bg-blue-900 px-8 py-3 font-semibold text-white transition-colors hover:bg-blue-800"
           >
-            View All Programs <HiArrowRight />
+            View All Departments <HiArrowRight />
           </Link>
         </div>
       </Container>
@@ -209,15 +182,45 @@ export const HomePage = () => (
           <h2 className="text-3xl font-bold text-white">Our Core Values</h2>
           <div className="mx-auto mt-3 h-1 w-16 rounded bg-amber-400" />
         </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {values.map((v) => (
+        <div className="flex flex-wrap justify-center gap-4">
+          {coreValues.map((v) => (
             <div
-              key={v.title}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+              key={v.label}
+              className="rounded-full border border-amber-400/40 bg-white/10 px-6 py-3 font-semibold text-amber-300 backdrop-blur-sm"
             >
-              <span className="mb-3 block text-3xl font-extrabold text-amber-400/30">{v.num}</span>
-              <h3 className="mb-2 font-bold text-amber-300">{v.title}</h3>
-              <p className="text-sm leading-relaxed text-blue-100">{v.desc}</p>
+              {v.label}
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+
+    {/* ── Long-term Impact ─────────────────────────────────────────── */}
+    <section className="bg-amber-50 py-20">
+      <Container>
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl font-bold text-blue-900">Our Desired Impact</h2>
+          <div className="mx-auto mt-3 h-1 w-16 rounded bg-amber-500" />
+          <p className="mx-auto mt-4 max-w-xl text-slate-600">
+            The long-term change we are building towards — to the glory of God and for the good of
+            humanity.
+          </p>
+        </div>
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            { title: 'Transformed Lives', body: 'Individuals with stronger faith and renewed purpose, living out God\'s love in their communities.' },
+            { title: 'Educated & Skilled People', body: 'Individuals with the knowledge and skills to contribute meaningfully to society.' },
+            { title: 'Healthy Communities', body: 'Communities with improved well-being and access to quality health services.' },
+            { title: 'Food Secure Farmers', body: 'Productive smallholder farmers achieving food security and sustainable livelihoods.' },
+            { title: 'Resilient Communities', body: 'Empowered communities that are self-reliant and resilient in the face of challenges.' },
+            { title: 'A Better Society', body: "A society reflecting God's love, justice, and compassion for all people." },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="rounded-2xl border border-amber-100 bg-white p-6 shadow-sm"
+            >
+              <h3 className="mb-2 font-bold text-blue-900">{item.title}</h3>
+              <p className="text-sm leading-relaxed text-slate-600">{item.body}</p>
             </div>
           ))}
         </div>
@@ -290,12 +293,12 @@ export const HomePage = () => (
     </section>
 
     {/* ── CTA Banner ───────────────────────────────────────────────── */}
-    <section className="bg-amber-50 py-20">
-      <Container className="text-center">
-        <h2 className="text-3xl font-bold text-blue-900">Ready to Make a Difference?</h2>
-        <p className="mx-auto mt-4 max-w-xl text-slate-600">
-          Join us in carrying God's Love to the people of Ghana and beyond. Whether through
-          volunteering, partnering, or donating, every act of love counts.
+    <section className="bg-blue-900 py-20">
+      <Container className="text-center text-white">
+        <h2 className="text-3xl font-bold">Ready to Make a Difference?</h2>
+        <p className="mx-auto mt-4 max-w-xl text-blue-200">
+          Join GLV in demonstrating God's love to the people of Ghana and beyond. Through
+          volunteering, partnering, or giving, every act counts.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link
@@ -306,9 +309,9 @@ export const HomePage = () => (
           </Link>
           <Link
             to={ROUTES.ABOUT}
-            className="inline-flex items-center gap-2 rounded-full border-2 border-blue-900 px-8 py-3 font-semibold text-blue-900 transition-colors hover:bg-blue-900 hover:text-white"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-white/60 px-8 py-3 font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
           >
-            Learn More About Us
+            Learn More About GLV
           </Link>
         </div>
       </Container>

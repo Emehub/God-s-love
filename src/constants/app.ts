@@ -1,13 +1,14 @@
 export const APP = {
-  NAME: "God's Love",
-  FULL_NAME: "God's Love Ministry",
-  TAGLINE: "Carrying God's Love to Ghana and Beyond",
+  NAME: "God's Love Vision",
+  SHORT_NAME: 'GLV',
+  FULL_NAME: "God's Love Vision (GLV)",
+  TAGLINE: 'Transforming Lives, Building Communities',
   DESCRIPTION:
-    "A Movement of Christlike People, carrying God's Love through discipleship, mentorship, education, and health promotion.",
+    "Demonstrating God's love by empowering people through transformation, education, health, skills, agriculture and community development.",
   EMAIL: 'avincentkofi@gmail.com',
   PHONE: '0547959189',
   LOCATION: 'Zaare, Near Azimbe Clinic, Bolgatanga, Upper East, Ghana',
-  AUTHOR: "God's Love Ministry",
+  AUTHOR: "God's Love Vision",
 } as const
 
 export const BREAKPOINTS = {
