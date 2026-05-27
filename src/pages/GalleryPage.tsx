@@ -2,130 +2,203 @@ import { useState } from 'react'
 import { HiX, HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 import { Container } from '@/components/common'
 
-type Category = 'All' | 'Community' | 'Education' | 'Worship' | 'Health' | 'Training'
+type Category = 'All' | 'Mission & Transformation' | 'Education & Skills' | 'Community Development'
 
 interface GalleryImage {
   id: number
   src: string
   caption: string
   category: Exclude<Category, 'All'>
-  credit: string
 }
 
 const images: GalleryImage[] = [
-  // Community
+  // ── Mission & Transformation ─────────────────────────────────────
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80',
-    caption: 'Community Gathering',
-    category: 'Community',
-    credit: 'Vonecia Carswell',
-  },
-  {
-    id: 2,
-    src: 'https://images.unsplash.com/photo-1541802645635-11f2286a7482?auto=format&fit=crop&w=800&q=80',
-    caption: 'Reaching Out With Love',
-    category: 'Community',
-    credit: 'Rémi Walle',
-  },
-  {
-    id: 3,
-    src: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80',
-    caption: 'Serving the Community',
-    category: 'Community',
-    credit: 'Larm Rmah',
-  },
-  // Education
-  {
-    id: 4,
-    src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80',
-    caption: 'Children Learning Together',
-    category: 'Education',
-    credit: 'Ben Mullins',
-  },
-  {
-    id: 5,
-    src: 'https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=800&q=80',
-    caption: 'Access to Formal Education',
-    category: 'Education',
-    credit: 'Mikael Kristenson',
-  },
-  {
-    id: 6,
-    src: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=800&q=80',
-    caption: 'A Brighter Future Through Learning',
-    category: 'Education',
-    credit: 'Jerry Wang',
-  },
-  // Worship
-  {
-    id: 7,
-    src: 'https://images.unsplash.com/photo-1438232992991-995b671e4d06?auto=format&fit=crop&w=800&q=80',
-    caption: 'Worship and Fellowship',
-    category: 'Worship',
-    credit: 'Edward Cisneros',
+    src: '/images/pic-1.jpeg',
+    caption: 'Youth Worship & Fellowship',
+    category: 'Mission & Transformation',
   },
   {
     id: 8,
-    src: 'https://images.unsplash.com/photo-1510904287-d11dd18cedf3?auto=format&fit=crop&w=800&q=80',
-    caption: 'Praise and Prayer',
-    category: 'Worship',
-    credit: 'Kiwihug',
+    src: '/images/pic-8.jpeg',
+    caption: 'Youth Mentorship Group',
+    category: 'Mission & Transformation',
   },
   {
     id: 9,
-    src: 'https://images.unsplash.com/photo-1601625194568-f8e1d45c5bdd?auto=format&fit=crop&w=800&q=80',
-    caption: 'Discipleship in Community',
-    category: 'Worship',
-    credit: 'Priscilla Du Preez',
+    src: '/images/pic-9.jpeg',
+    caption: 'Discipleship Training',
+    category: 'Mission & Transformation',
   },
-  // Health
   {
     id: 10,
-    src: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80',
-    caption: 'Community Health Outreach',
-    category: 'Health',
-    credit: 'Online Marketing',
+    src: '/images/pic-10.jpeg',
+    caption: 'Evening Community Outreach',
+    category: 'Mission & Transformation',
   },
   {
     id: 11,
-    src: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80',
-    caption: 'Health Awareness Campaign',
-    category: 'Health',
-    credit: 'National Cancer Institute',
+    src: '/images/pic-11.jpeg',
+    caption: 'Night Evangelism Gathering',
+    category: 'Mission & Transformation',
+  },
+  {
+    id: 17,
+    src: '/images/pic-17.jpeg',
+    caption: 'Leadership Team',
+    category: 'Mission & Transformation',
+  },
+  {
+    id: 18,
+    src: '/images/pic-18.jpeg',
+    caption: 'Youth Fellowship Conference',
+    category: 'Mission & Transformation',
+  },
+  {
+    id: 20,
+    src: '/images/pic-20.jpeg',
+    caption: 'Youth Leaders Group',
+    category: 'Mission & Transformation',
+  },
+  {
+    id: 21,
+    src: '/images/pic-21.jpeg',
+    caption: 'Leadership Development Session',
+    category: 'Mission & Transformation',
+  },
+  {
+    id: 22,
+    src: '/images/pic-22.jpeg',
+    caption: 'Spiritual Retreat & Conference',
+    category: 'Mission & Transformation',
+  },
+
+  // ── Education & Skills ───────────────────────────────────────────
+  {
+    id: 4,
+    src: '/images/pic-4.jpeg',
+    caption: 'Education Support — Student Mentoring',
+    category: 'Education & Skills',
+  },
+  {
+    id: 5,
+    src: '/images/pic-5.jpeg',
+    caption: 'School Outreach — Sharing Resources',
+    category: 'Education & Skills',
+  },
+  {
+    id: 7,
+    src: '/images/pic-7.jpeg',
+    caption: 'Youth Training Seminar',
+    category: 'Education & Skills',
   },
   {
     id: 12,
-    src: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80',
-    caption: 'Caring for Whole People',
-    category: 'Health',
-    credit: 'Hush Naidoo',
+    src: '/images/pic-12.jpeg',
+    caption: 'Skills Training Workshop',
+    category: 'Education & Skills',
   },
-  // Training
   {
     id: 13,
-    src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80',
-    caption: 'Mentorship in Action',
-    category: 'Training',
-    credit: 'Brooke Cagle',
-  },
-  {
-    id: 14,
-    src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80',
-    caption: 'Leadership Development',
-    category: 'Training',
-    credit: 'Amy Hirschi',
+    src: '/images/pic-13.jpeg',
+    caption: 'Digital Literacy Session',
+    category: 'Education & Skills',
   },
   {
     id: 15,
-    src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80',
-    caption: 'Skill Building Workshop',
-    category: 'Training',
-    credit: 'Jason Goodman',
+    src: '/images/pic-15.jpeg',
+    caption: 'Bible Literacy Class',
+    category: 'Education & Skills',
+  },
+  {
+    id: 16,
+    src: '/images/pic-16.jpeg',
+    caption: "Women's Vocational Training",
+    category: 'Education & Skills',
+  },
+  {
+    id: 19,
+    src: '/images/pic-19.jpeg',
+    caption: 'Tie-Dye Skills Training',
+    category: 'Education & Skills',
+  },
+  {
+    id: 24,
+    src: '/images/pic-24.jpeg',
+    caption: 'Classroom Education Support',
+    category: 'Education & Skills',
+  },
+  {
+    id: 25,
+    src: '/images/pic-25.jpeg',
+    caption: 'Youth Empowerment Workshop',
+    category: 'Education & Skills',
+  },
+  {
+    id: 26,
+    src: '/images/pic-26.jpeg',
+    caption: 'Health Education in Schools',
+    category: 'Education & Skills',
+  },
+  {
+    id: 27,
+    src: '/images/pic-27.jpeg',
+    caption: 'School Outreach Program',
+    category: 'Education & Skills',
+  },
+  {
+    id: 28,
+    src: '/images/pic-28.jpeg',
+    caption: 'Student Study Support',
+    category: 'Education & Skills',
+  },
+
+  // ── Community Development ────────────────────────────────────────
+  {
+    id: 2,
+    src: '/images/pic-2.jpeg',
+    caption: 'Clothing Distribution Outreach',
+    category: 'Community Development',
+  },
+  {
+    id: 3,
+    src: '/images/pic-3.jpeg',
+    caption: 'Community Assembly & Awareness',
+    category: 'Community Development',
+  },
+  {
+    id: 6,
+    src: '/images/pic-6.jpeg',
+    caption: 'Women & Children Empowerment',
+    category: 'Community Development',
+  },
+  {
+    id: 14,
+    src: '/images/pic-14.jpeg',
+    caption: "Children's Community Outreach",
+    category: 'Community Development',
+  },
+  {
+    id: 23,
+    src: '/images/pic-23.jpeg',
+    caption: 'WASH — Community Clean-Up',
+    category: 'Community Development',
   },
 ]
 
-const categories: Category[] = ['All', 'Community', 'Education', 'Worship', 'Health', 'Training']
+const categories: Category[] = [
+  'All',
+  'Mission & Transformation',
+  'Education & Skills',
+  'Community Development',
+]
+
+const categoryColors: Record<Exclude<Category, 'All'>, string> = {
+  'Mission & Transformation': 'bg-amber-500',
+  'Education & Skills': 'bg-green-600',
+  'Community Development': 'bg-purple-600',
+}
 
 export const GalleryPage = () => {
   const [active, setActive] = useState<Category>('All')
@@ -156,9 +229,17 @@ export const GalleryPage = () => {
         <Container>
           <h1 className="text-4xl font-bold">Our Gallery</h1>
           <p className="mx-auto mt-4 max-w-2xl text-blue-200">
-            Glimpses of God's Love at work, in communities, classrooms, health outreaches, and
-            worship gatherings across Ghana and beyond.
+            Glimpses of God's Love Vision at work — in communities, classrooms, outreaches, and
+            fellowship gatherings across Ghana and beyond.
           </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
+            {(['Mission & Transformation', 'Education & Skills', 'Community Development'] as const).map((cat) => (
+              <span key={cat} className="flex items-center gap-1.5 text-blue-200">
+                <span className={`h-2.5 w-2.5 rounded-full ${categoryColors[cat]}`} />
+                {cat} ({images.filter((i) => i.category === cat).length})
+              </span>
+            ))}
+          </div>
         </Container>
       </section>
 
@@ -206,11 +287,11 @@ export const GalleryPage = () => {
                     className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black/60 via-transparent to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    <span className="rounded-full bg-amber-500 px-2.5 py-0.5 text-xs font-semibold text-white self-start mb-1">
+                    <span className={`mb-1 self-start rounded-full px-2.5 py-0.5 text-xs font-semibold text-white ${categoryColors[img.category]}`}>
                       {img.category}
                     </span>
                     <p className="text-sm font-semibold text-white">{img.caption}</p>
-                    <p className="text-xs text-white/70">Photo: {img.credit}, Unsplash</p>
+                    <p className="text-xs text-white/70">God's Love Vision · GLV</p>
                   </div>
                 </div>
               </div>
@@ -234,7 +315,6 @@ export const GalleryPage = () => {
           aria-modal="true"
           aria-label="Image lightbox"
         >
-          {/* Close */}
           <button
             className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20"
             onClick={() => setLightbox(null)}
@@ -243,7 +323,6 @@ export const GalleryPage = () => {
             <HiX className="h-6 w-6" />
           </button>
 
-          {/* Prev */}
           <button
             className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20 disabled:opacity-30"
             onClick={(e) => { e.stopPropagation(); prev() }}
@@ -253,25 +332,23 @@ export const GalleryPage = () => {
             <HiChevronLeft className="h-6 w-6" />
           </button>
 
-          {/* Image */}
           <div
             className="max-h-[85vh] max-w-4xl overflow-hidden rounded-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={currentImage.src.replace('w=800', 'w=1200')}
+              src={currentImage.src}
               alt={currentImage.caption}
               className="max-h-[75vh] w-full object-contain"
             />
             <div className="bg-blue-950 px-6 py-3 text-center">
               <p className="font-semibold text-white">{currentImage.caption}</p>
               <p className="mt-0.5 text-xs text-blue-300">
-                {currentImage.category}, Photo by {currentImage.credit} on Unsplash
+                {currentImage.category} · God's Love Vision (GLV)
               </p>
             </div>
           </div>
 
-          {/* Next */}
           <button
             className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20 disabled:opacity-30"
             onClick={(e) => { e.stopPropagation(); next() }}
@@ -281,7 +358,6 @@ export const GalleryPage = () => {
             <HiChevronRight className="h-6 w-6" />
           </button>
 
-          {/* Counter */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-white/10 px-3 py-1 text-xs text-white">
             {currentIndex + 1} / {filtered.length}
           </div>

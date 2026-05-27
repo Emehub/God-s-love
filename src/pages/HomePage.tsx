@@ -245,18 +245,14 @@ export const HomePage = () => (
         </div>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {[
-            { src: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80', alt: 'Community Gathering' },
-            { src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80', alt: 'Children Learning' },
-            { src: 'https://images.unsplash.com/photo-1438232992991-995b671e4d06?auto=format&fit=crop&w=600&q=80', alt: 'Worship & Fellowship' },
-            { src: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80', alt: 'Health Outreach' },
-            { src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80', alt: 'Mentorship' },
-            { src: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=600&q=80', alt: 'Serving the Community' },
-            { src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80', alt: 'Leadership Training' },
-            {
-              src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80',
-              alt: 'Skill Workshop',
-              overlay: true,
-            },
+            { src: '/images/pic-22.jpeg', alt: 'Spiritual Retreat & Conference' },
+            { src: '/images/pic-5.jpeg', alt: 'School Outreach — Sharing Resources' },
+            { src: '/images/pic-6.jpeg', alt: 'Women & Children Empowerment' },
+            { src: '/images/pic-12.jpeg', alt: 'Skills Training Workshop' },
+            { src: '/images/pic-19.jpeg', alt: 'Tie-Dye Skills Training' },
+            { src: '/images/pic-3.jpeg', alt: 'Community Assembly & Awareness' },
+            { src: '/images/pic-1.jpeg', alt: 'Youth Worship & Fellowship' },
+            { src: '/images/pic-14.jpeg', alt: "Children's Community Outreach", overlay: true },
           ].map((img, i) => (
             <Link
               key={i}
