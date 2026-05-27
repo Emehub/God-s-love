@@ -53,9 +53,15 @@ const coreValues = [
 export const HomePage = () => (
   <div>
     {/* ── Hero ─────────────────────────────────────────────────────── */}
-    <section className="relative flex min-h-[92vh] items-center overflow-hidden bg-blue-900">
-      <div className="absolute -top-32 right-0 h-150 w-150 rounded-full bg-amber-500/10 blur-3xl" />
-      <div className="absolute bottom-0 left-0 h-100 w-100 rounded-full bg-blue-700/30 blur-3xl" />
+    <section className="relative flex min-h-[92vh] items-center overflow-hidden">
+      {/* Background photo */}
+      <img
+        src="/images/pic-18.jpeg"
+        alt="GLV youth fellowship"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-blue-900/80" />
 
       <Container className="relative z-10 py-24 text-center text-white">
         <span className="mb-5 inline-block rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-300">

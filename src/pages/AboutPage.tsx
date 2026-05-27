@@ -48,8 +48,16 @@ const governanceLevels = [
 export const AboutPage = () => (
   <div>
     {/* Page header */}
-    <section className="bg-blue-900 py-20 text-center text-white">
-      <Container>
+    <section className="relative py-28 text-center text-white">
+      {/* Background photo */}
+      <img
+        src="/images/pic-20.jpeg"
+        alt="GLV youth leaders"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-blue-900/80" />
+      <Container className="relative z-10">
         <span className="mb-4 inline-block rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-300">
           God's Love Vision · GLV
         </span>
