@@ -184,7 +184,7 @@ export const Navbar = () => {
                     {/* Sub-menu flyout */}
                     {activeDept === i && (
                       <div
-                        className="absolute left-full top-0 z-50 ml-0.5 w-60 rounded-2xl border border-slate-100 bg-white py-2 shadow-2xl"
+                        className="absolute right-full top-0 z-50 mr-0.5 w-60 rounded-2xl border border-slate-100 bg-white py-2 shadow-2xl"
                         onMouseEnter={keepSub}
                         onMouseLeave={hideSub}
                       >
