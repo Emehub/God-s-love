@@ -53,7 +53,7 @@ export const AboutPage = () => (
       <img
         src="/images/pic-20.jpeg"
         alt="GLV youth leaders"
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className="absolute inset-0 h-full w-full object-cover object-top"
       />
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-blue-900/80" />
